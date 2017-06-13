@@ -1,6 +1,7 @@
 # Introduction #
 
-This project is a platform where we automate the processing of scrapping websites and then applying semantic analysis on that and provide easy ontology and feature based search for users.  
+This project is a platform where we automate the processing of scrapping websites and then applying semantic analysis on that and provide easy ontology and feature based search for users.User initiate his Web Scrappy Jobs by entering universities urls and then submits it to our web crawler service which uses java.util.concurrent packages to scrap data from university websites concurrently and save it to HDSF and generate Kafka event to Kafka Topic.So Spark Streaming is subscribed to Kafka Topic and it reads the event as soon as Kafka writes the events(publish-subscribe model) and then it cleans the webpage data and then running classificaton algorithms to identify that whether the extracted page is faculty cv or not using supervised learning and  and extracting important feature like name,email,university,location etc from the extracted page using CoreNLP techniques and in last converting all data into RDF(Resource Descriptor Framework) and store it in our JENA triple store.  
+Then User searches for any research area in any particular university, so we used concept of Semantic Search instead of keyword based search using Ontology to expand the query and give best results to the user. 
 
 # Basic Requirements #
 - MongoDB 3.2.9
@@ -8,7 +9,6 @@ This project is a platform where we automate the processing of scrapping website
 - Maven 3.3.9
 - Hadoop (version :- 2.6 )
 - Spark 1.6.0
-- Apache Solr 5.1.0( we are not using this because it support only nt format , it doesn’t support rdf + ontology).
 - Python 3.4.3
 - Apache Kafka 0.9.0.1-scala-2.10 
 - Zookeeper
