@@ -30,7 +30,14 @@ mvn install:install-file -Dfile=location-to-this-path/stanford-srparser-2014-10-
 
 # Installation #
 
-There are siz modules of this project.  
+* Please set these environment variables in your bashrc or /etc/environment file  
+- SARAH_SPARK_STREAMING_CONFIG=path/to/spark-config  
+- SEMANTIC_ANALYSIS_WEB_CLIENT_CONFIG=path/to/web-client  
+- SARAH_WEB_CRAWLER_CONFIG=path/to/web-crawler-config  
+- SEMANTIC_ANALYSIS_OAUTH_CONFIG=path/to/oauth-config  
+
+
+There are six modules of this project.  
 * Web Crawler (REST API to scrap websites and store pages in HDFS)  
 ```
 mvn clean install
