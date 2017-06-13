@@ -1,0 +1,131 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<title>Knowledge Discovery</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" sizes="192x192" href="/images/android-desktop.png" />
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+<link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png" />
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="/images/touch/ms-touch-icon-144x144-precomposed.png" />
+<meta name="msapplication-TileColor" content="#3372DF" />
+
+<link rel="shortcut icon" href="/images/favicon.png" />
+
+<link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/material-icon.css" />
+<link rel="stylesheet" href="/css/mterial.css" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body
+	class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+		<div th:replace="fragments/header :: header"></div>
+		<main class="mdl-layout__content">
+		<div class="mdl-layout__tab-panel is-active">
+			<h1 class="solutions">Interested in Working with Us !</h1>
+			<div align="center">
+				<font size="4">If you are already an member, Please <a
+					th:href="@{${semanticAnalysisHost}+'/login'}">Click here</a> to
+					login
+				</font>
+			</div>
+			<section class="section--center mdl-grid mdl-shadow--2dp">
+				<div class="mdl-cell mdl-cell--5-col form-right">
+					<h4>Be a part of our Knowledge Discovery Platform.</h4>
+				</div>
+				<div class="mdl-cell mdl-cell--1-col"></div>
+				<!-- Simple Textfield -->
+				<div class="mdl-cell mdl-cell--6-col form-left">
+					<form action="signup-employee" method="post" id="frmSignUpEmployee">
+						<div
+							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" name="firstName"
+								id="signupFirstName" pattern="[A-Z,a-z, ]*"
+								title="First name must not be blank and contain only alphabets" />
+							<label class="mdl-textfield__label" for="signupFirstName">First
+								Name</label> <span class="mdl-textfield__error"></span>
+						</div>
+						<div class="spanbelowerror">
+							<span style="color: red;" id='signupFirstNameError'></span>
+						</div>
+
+						<div
+							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" name="lastName"
+								id="signupLastName" pattern="[A-Z,a-z, ]*"
+								title="Last name must not be blank and contain only alphabets" />
+							<label class="mdl-textfield__label" for="signupLastName">Last
+								Name</label> <span class="mdl-textfield__error"></span>
+						</div>
+						<div class="spanbelowerror">
+							<span style="color: red;" id='signupLastNameError'></span>
+						</div>
+
+						<div
+							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" name="emailId"
+								id="signupEmailId" /> <label class="mdl-textfield__label"
+								for="signupEmailId">Email id</label>
+						</div>
+						<div class="spanbelowerror">
+							<span id='signupEmailIdError' style="color: red;"></span>
+						</div>
+
+						<div
+							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text"
+								name="mobileNumber" id="signupMobileNumber" /> <label
+								class="mdl-textfield__label" for="signupMobileNumber">Phone
+								Number</label>
+						</div>
+						<div class="spanbelowerror">
+							<span id='signupMobileNumberError' style="color: red;"></span>
+						</div>
+						<div
+							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+								for="chkAccept"> <input type="checkbox"
+								name="checkbox-2" id="chkAccept" class="mdl-checkbox__input" />
+								<span class="mdl-checkbox__label">I've read the terms and
+									conditions </span>
+							</label>
+						</div>
+						<div class="spanbelowerror">
+							<span id='signupAcceptError' style="color: red;"></span>
+						</div>
+
+						<div class="signupMargin">
+							<input type='button'
+								class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+								value='SignUp' id='signUpSubmitEmployee' />
+						</div>
+
+					</form>
+				</div>
+			</section>
+		</div>
+
+		<div th:replace="fragments/footer :: footer"></div>
+
+		</main>
+	</div>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/popup.js"></script>
+	<script src="/js/material.js"></script>
+	<script src="/js/signup_employee.js"></script>
+	<script src="/js/validations.js"></script>
+</body>
+</html>

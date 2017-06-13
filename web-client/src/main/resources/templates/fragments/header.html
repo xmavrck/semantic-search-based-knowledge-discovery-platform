@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<header
+	class="mdl-layout__header mdl-layout__header--waterfall nav-header">
+	<div class="mdl-layout__header-row">
+		<!-- Title -->
+		<a href="/"><img class="header-logo"
+			src="/images/Knowledge discovery.png" alt="Knowledge Discovery" /></a>
+		<!-- Add spacer, to align navigation to the right -->
+		<div class="mdl-layout-spacer"></div>
+		<!-- Navigation. We hide it in small screens. -->
+		<nav class="mdl-navigation mdl-layout--large-screen-only">
+		
+		<a class="mdl-navigation__link" href="/">Home</a>
+			<a class="mdl-navigation__link" href="#">Support</a> <a
+				class="mdl-navigation__link" href="about-us">About Us</a> <a
+				class="mdl-navigation__link signup"
+				th:href="@{'http://'+${oAuthUrl}+'/signup'}">Sign Up</a> <a
+				class="mdl-navigation__link login" href="/login">Login</a>
+		</nav>
+	</div>
+</header>
+</html>

@@ -1,0 +1,340 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<title>Knowledge Discovery</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" sizes="192x192" href="/images/android-desktop.png" />
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+<link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png" />
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="/images/touch/ms-touch-icon-144x144-precomposed.png" />
+<meta name="msapplication-TileColor" content="#3372DF" />
+
+<link rel="shortcut icon" href="/images/favicon.png" />
+
+<link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/material-icon.css" />
+<link rel="stylesheet" href="/css/mterial.css" />
+<link rel="stylesheet" href="/css/styles.css" />
+
+<link href="https://cdn.jsdelivr.net/select2/3.4.8/select2.css"
+	rel="stylesheet" />
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/select2/3.4.8/select2.min.js"></script>
+
+<style type="text/css">
+.inner-bg1 h2 {
+	text-align: center;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+	padding: .5em .5em .5em 1.5em;
+	border: 1px solid #aaa;
+	background: #fff;
+	color: #666;
+	margin: 3px 0 3px 3px;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close
+	{
+	font-size: 1em;
+	margin: .25em 0 0 .25em;
+	background-image: none;
+	text-decoration: none;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:before
+	{
+	content: 'X';
+	color: #3498db;
+	font-weight: bold;
+}
+
+.blockform label, .blockform .radio-label--group, .blockform input[type="submit"]
+	{
+	margin: 1em 0 0 0;
+	display: block;
+}
+
+.blockform .radio-label {
+	display: inline;
+	padding-right: 1em;
+}
+
+.blockform input[type="text"], .blockform textarea, .blockform select {
+	display: block;
+}
+
+.blockform input[type="text"], .blockform textarea {
+	width: 100%;
+	border: 1px solid #aaa;
+}
+
+.mdl-data-table tbody tr:hover {
+	background-color: transparent;
+}
+
+article {
+	display: inline-block;
+	font-size: 1rem;
+	vertical-align: top;
+	width: 66.66667%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: left;
+}
+
+.blue {
+	background: #81d4fa;
+}
+
+.blue:hover {
+	background: #81d4fa !important;
+}
+
+.wrapper {
+	font-size: 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1960px;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+.article-header, .article-intro, .article-footer {
+	padding: 1em;
+	display: inline-block;
+	font-size: 1rem;
+	vertical-align: top;
+	width: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: left;
+}
+
+@media ( min-width : 500px) {
+	.article-header, .article-intro, .article-footer {
+		text-align: center;
+	}
+}
+
+.article-header h1 {
+	text-transform: uppercase;
+	color: #1BA1E2;
+}
+
+ul {
+	margin-top: 0;
+	padding-left: 1.1em;
+}
+
+.btn-major {
+	background: #fff;
+	border: 2px solid #3498db;
+	border-radius: 4px;
+	color: #3498db;
+	padding: .25em 1em;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	transition: 200ms;
+}
+
+.btn-major:hover {
+	background: #3498db;
+	color: #fff;
+}
+
+#mydiv {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.ajax-loader {
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.mdl-data-table th {
+	vertical-align: middle;
+	font-size: 15px;
+	text-align: left;
+	border-right: 1px solid #ccc;
+}
+
+.mdl-data-table td, .mdl-data-table td .mdl-data-table__select {
+	vertical-align: top;
+	line-height: 30px;
+	border-right: 1px solid #ccc;
+}
+
+.mdl-data-table td {
+	text-align: left;
+	font-size: 12px;
+}
+
+.search-input {
+	text-align: center;
+}
+
+.mdl-tabs__tab-bar.tab-table {
+	margin: 50px 0 30px;
+}
+</style>
+<link rel="stylesheet"
+	href="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css" />
+<!-- <script type="text/javascript"
+	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script> -->
+</head>
+<body
+	class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+		<div th:replace="fragments/headerUser :: header"></div>
+		<main class="mdl-layout__content form-content">
+		<section class=" mdl-grid mdl-shadow--2dp form-tabs">
+			<div
+				class="mdl-tabs vertical-mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+				<div class="mdl-grid mdl-grid--no-spacing">
+					<div class="mdl-cell mdl-cell--12-col">
+						<div class="mdl-grid mdl-grid--no-spacing">
+							<div class="mdl-cell mdl-cell--0-col"></div>
+							<div class="mdl-cell mdl-cell--12-col" id="divSearch"
+								style="margin-top: 150px; margin-bottom: 150px;">
+								<div class="mdl-cell mdl-cell--12-col">
+									<div class="wrapper">
+										<article class="blockform normaltext">
+											<input id="rbNormalSearch" checked='checked' name="rbSearchType" type="radio"/><label
+												class="search-label">Search By Query</label><input
+												id="rbAdvancedSearch" name="rbSearchType" type="radio"/><label
+												class="search-label">Search By Project Description</label>
+										</article>
+										<article class="blockform" id='normalSearchBlock'>
+											<label class="search-label" for="">Please enter
+												Search query</label> <input
+												class="mdl-textfield__input search-input" for="sample3"
+												id="inputAdvancedSearchQuery" style="" type="text" /> <i
+												class="material-icons search-icon">search</i><label
+												class="search-label" for="">Research Areas &nbsp;<small>You
+													can select multiple research areas</small> <select
+												multiple="multiple" id="researchAreas" style="width: 100%"></select>
+											</label> <label class="search-label" for=""> University<small>&nbsp;You
+													can select multiple universities</small> <select
+												multiple="multiple" id="universities" style="width: 100%">
+											</select>
+											</label> <label class="search-label" for=""> <input
+												type='checkbox' id='isKeywordbased' /><span>Keyword-based
+													Search ?</span>
+											</label>
+										</article>
+										<article class="blockform normaltextarea" id='advancedSearchBlock'>
+											<textarea id='projectDescription' rows='10' cols='80'
+												placeholder='enter short description for your project'></textarea>
+										</article>
+									</div>
+									<div
+										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded"
+										data-upgraded=",MaterialTextfield" style="width: 100%;">
+
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--12-col search-input">
+									<input id="btnAdvancedSearchQuery" value="Search"
+										class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent search-btn"
+										data-upgraded=",MaterialButton,MaterialRipple" type="button" />
+								</div>
+								<div class="mdl-tabs mdl-js-tabs" id='tabsResults'>
+									<div class="mdl-tabs__tab-bar tab-table">
+										<div class="mdl-tabs__tab-bar">
+											<a class="mdl-tabs__tab is-active" href="#scroll-tab-1"><i
+												class="material-icons">wrap_text</i>Search Results</a> <a
+												class="mdl-tabs__tab" href="#scroll-tab-2"><i
+												class="material-icons">group</i>Faculty Members </a>
+										</div>
+									</div>
+									<section class="mdl-tabs__panel is-active" id="scroll-tab-1">
+										<div class="mdl-cell mdl-cell--12-col search-input">
+											<table
+												class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-upgraded"
+												id="links"
+												style="display: table; word-wrap: normal !important; white-space: normal;"
+												data-upgraded=",MaterialDataTable" cellspacing="10"
+												cellpadding="10" width="100%"></table>
+										</div>
+									</section>
+									<section class="mdl-tabs__panel" id="scroll-tab-2">
+										<div class="mdl-cell mdl-cell--12-col search-input">
+											<table
+												class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-upgraded"
+												id="universityNames"
+												style="display: table; word-wrap: normal !important; white-space: normal;"
+												data-upgraded=",MaterialDataTable" cellspacing="10"
+												cellpadding="10" width="100%"></table>
+										</div>
+									</section>
+								</div>
+								<!--</form> -->
+							</div>
+						</div>
+						<!--</form> -->
+					</div>
+					<span id='results' class="results"></span>
+				</div>
+			</div>
+			<div id="mydiv">
+				<img src="/images/gears.gif" class="ajax-loader" />
+			</div>
+		</section>
+		<div th:replace="fragments/footerLogin :: footer"></div>
+		</main>
+	</div>
+	<script
+		src="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.js"></script>
+	<!-- <script src="/js/jquery-3.1.0.min.js"></script> -->
+	<script src="/js/material.js"></script>
+	<script type="text/javascript" src="/js/showdropdowns.js"></script>
+	<script src="/js/config.js"></script>
+	<script src="/js/search.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('ul.tabs li').click(function() {
+				var tab_id = $(this).attr('data-tab');
+
+				$('ul.tabs li').removeClass('current');
+				$('.tab-content').removeClass('current');
+
+				$(this).addClass('current');
+				$("#" + tab_id).addClass('current');
+			})
+
+		})
+	</script>
+
+</body>
+</html>

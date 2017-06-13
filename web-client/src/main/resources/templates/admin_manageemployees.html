@@ -1,0 +1,72 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<meta http-equiv=”refresh” content=”8" />
+<title>Knowledge Discovery</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" sizes="192x192" href="/images/android-desktop.png" />
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+<link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png" />
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="/images/touch/ms-touch-icon-144x144-precomposed.png" />
+<meta name="msapplication-TileColor" content="#3372DF" />
+
+<link rel="shortcut icon" href="/images/favicon.png" />
+
+<link rel="stylesheet" href="/css/fonts.css" />
+<link rel="stylesheet" href="/css/material-icon.css" />
+<link rel="stylesheet" href="/css/mterial.css" />
+<link rel="stylesheet" href="/css/styles.css" />
+<style type="text/css">
+table#tblScrappyJobs {
+	margin: 0 auto;
+}
+
+.inner-bg1 h2 {
+	text-align: center;
+}
+</style>
+</head>
+<body
+	class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+		<div th:replace="fragments/headerAdmin :: header"></div>
+		<main class="mdl-layout__content">
+		<div class="mdl-grid--no-spacing" style="min-height: 600px;">
+			<div class="inner-bg1">
+				<h2>
+					<span class="mainHeading">Manage Employees</span>
+				</h2>
+				<div align='center'>
+					<table
+						class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"
+						id='tblEmployees' cellspacing="10" cellpadding="10">
+					</table>
+				</div>
+			</div>
+		</div>
+		<div th:replace="fragments/footerLogin :: footer"></div>
+		</main>
+	</div>
+	<script src="/js/jquery-2.1.4.min.js"></script>
+
+	<script src="/js/material.js"></script>
+	<script src="/js/config.js"></script>
+	<script src="/js/manageemployees.js"></script>
+	<script type="text/javascript" src='js/custom/footer.js'>
+		
+	</script>
+</body>
+</html>

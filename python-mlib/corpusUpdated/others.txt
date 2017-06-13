@@ -1,0 +1,10 @@
+contact
+curriculum
+cv
+declaration
+department
+faculty
+profile
+resume
+school
+vitae

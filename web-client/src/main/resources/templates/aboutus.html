@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<title>Knowledge Discovery</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" sizes="192x192" href="images/android-desktop.png" />
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png" />
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="images/touch/ms-touch-icon-144x144-precomposed.png" />
+<meta name="msapplication-TileColor" content="#3372DF" />
+
+<link rel="shortcut icon" href="images/favicon.png" />
+<style type="text/css">
+</style>
+<link rel="stylesheet" href="css/fonts.css" />
+<link rel="stylesheet" href="css/material-icon.css" />
+<link rel="stylesheet" href="css/mterial.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body
+	class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+		<div th:replace="fragments/header :: header"></div>
+		<main class="mdl-layout__content">
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--8-col search-text">
+				<h2>Academic Research Community</h2>
+				<p>Build educational, cultural and economic opportunities that
+					will allow for academic freedom to question, research and get
+					advance knowledge.</p>
+			</div>
+		</div>
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--8-col search-text">
+				<h2>Our mission</h2>
+				<p>Our mission is to connect the world of science and make
+					research open to all.</p>
+			</div>
+		</div>
+		<div class="mdl-grid" style="min-height: 300px;height: 300px;">
+			<div class="mdl-cell mdl-cell--8-col search-text">
+				<h2>Here's how it works</h2>
+				<p>
+					<b>Ask questions, get answers,</b> and find your colleague in
+					specific research area.
+				</p>
+				<p>
+					<b>Share your publications,</b> access millions more, and publish your data.
+				</p>
+				<p>
+					<b>Connect and collaborate with colleagues,</b> peers, co-authors, and specialists in specific  field.
+				</p>
+				<p>
+					<b>Get starts</b> and make an academic research.
+				</p>
+			</div>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+		</main>
+	</div>
+
+	<script src="js/material.js"></script>
+</body>
+</html>

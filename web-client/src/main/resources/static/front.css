@@ -1,0 +1,161 @@
+
+body{margin: 0; padding: 0; font-family: 'open_sansregular'; transition:0.2s all;}
+
+
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    text-rendering: optimizelegibility;
+}
+
+nav {
+    background-color: #C8241C;}
+
+.logo {
+    float: left;
+    height: 64px;
+}
+
+.logo > img {
+    display: block;
+    height: 100%;
+}	
+	
+	
+.headroom--pinned {
+    transform: translateY(0px);
+}
+.headroom {
+    transition: all 0.7s ease-in-out 0s;
+}
+/*
+.fixed {
+    background-color: #fff;
+    height: 71px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+	animation: 0.4s ease 0s normal none 1 running bounce1;
+}*/
+@keyframes bounce1 {
+0% {
+    top: 0;
+}
+25% {
+    top: 15px;
+}
+50% {
+    top: 8px;
+}
+100% {
+    top: 0;
+}
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+	
+	
+.main_slide {
+    position: relative;
+}
+
+.splash-screen-slider ul li {
+    background-position: center center !important;
+    background-size: cover !important;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.splash-screen-slider ul li {
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+
+
+
+.splash-screen .slide-content {
+  
+    left: 5%;
+    margin-left: 0;
+    position: absolute;
+    text-align: center;
+     top: 30%;
+    width: 90%;
+    z-index: 55;
+}
+
+.slide-content h3 {font-family: 'open_sansbold'; color: #fff; font-size: 80px;}
+.slide-content h2 {color: #fff; font-size: 50px; font-family: 'open_sansbold';}
+.slide-content span { font-family: 'casablanca_noir'; font-size: 90px;}
+
+
+
+.read-more {
+    bottom: 10px;
+    color: #414042;
+    font-size: 1.3em;
+    font-weight: 700;
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+    display: block;
+    cursor: pointer;
+}
+
+.read-more i {
+    animation: 2s ease 0s normal none infinite running chevron-bounce;
+    font-size: 2em;
+    position: relative;
+}
+
+@keyframes chevron-bounce {
+0% {
+    bottom: 0;
+}
+80% {
+    bottom: 0;
+    color: #414042;
+}
+90% {
+    bottom: -5px;
+    color: #999;
+}
+100% {
+    bottom: 0;
+    color: #414042;
+}
+}
+
+
+.splash-screen .chevrons {
+    bottom: 0px;
+    height: 1229px;
+    opacity: 0.8;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+}
+
+
+/*for page inner*/
+.sld {position:relative; padding-top:70px;}
+ .heading2{   font-family: 'open_sansbold'; font-size:40px;}
+
+
+
+.box{height: 200px; width: 200px; display: inline-block; background-color: pink; margin: 10px;}

@@ -1,0 +1,1383 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sarah/ontologies/2017/3/ComSciOntology#"
+     xml:base="http://www.semanticweb.org/sarah/ontologies/2017/3/ComSciOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology">
+        <rdfs:comment xml:lang="en">Computer science ontology with various research fields. This ontology has the details about each research area and how one area is related with another</rdfs:comment>
+        <rdfs:label xml:lang="en">Computer science research areas ontology</rdfs:label>
+    </owl:Ontology>
+        <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasDifficulties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasDifficulties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasSteps -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasSteps"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTerminology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTerminology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTypes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTypes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#AllNames -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#AllNames">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPaper"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#EmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#EmailAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Keywords">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPaper"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchField">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPaper -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPaper">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPublications -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPublications">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchPaper"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#URL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#URL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#UniversityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#UniversityName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms_and_Complexity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Analysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms_and_Complexity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms_and_Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In computer science, the time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the string representing the input. The time complexity of an algorithm is commonly expressed using big O notation, which excludes coefficients and lower order terms.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms_and_Complexity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Automata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Automata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Batch_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Batch_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computational_Biology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computational_Biology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational Biology, sometimes referred to as bioinformatics, is the science of using biological data to develop algorithms and relations among various biological systems</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Architecture_and_Design -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Architecture_and_Design">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer architecture is a specification detailing how a set of software and hardware technology standards interact to form a computer system or platform. In short, computer architecture refers to how a computer system is designed and what technologies it is compatible with.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Graphics_and_Visualization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Graphics_and_Visualization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visualization is the process of representing data graphically and interacting with these representations in order to gain insight into the data. Traditionally, computer graphics has provided a powerful mechanism for creating, manipulating, and interacting with these representations.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#computer_vision"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Image_Processing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pattern_recognition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Cryptography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Cryptography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Mining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Mining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Graphics_and_Visualization"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasSteps"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Preprocessing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Preprocessing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Structures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Structures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Most common data structures are tables, trees, file etc</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data structure is specialized form of storing the data</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_cleaning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_cleaning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Structures"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms_and_Complexity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_understanding"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasDifficulties"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Digital_Logic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Digital_Logic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Disclosure_integration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Disclosure_integration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Discourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Discourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Distributed_Systems_and_Parallel_computing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Distributed_Systems_and_Parallel_computing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A distributed system can be demonstrated by the client-server architecture, which forms the base for multi-tier architectures; alternatives are the broker architecture such as CORBA, and the Service-Oriented Architecture (SOA). In this architecture, information processing is not confined to a single machine rather it is distributed over several independent computers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In distributed architecture, components are presented on different platforms and several components can cooperate with one another over a communication network in order to achieve a specific objective or goal.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parallel processing is also associated with data locality and data communication. Parallel Computer Architecture is the method of organizing all the resources to maximize the performance and the programmability within the limits given by technology and the cost at any instance of time.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Embedded_systems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Embedded_systems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints. It is embedded as part of a complete device often including hardware and mechanical parts. Embedded systems control many devices in common use today.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Faculty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_Language_Processing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasSteps"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Hard_real_time_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Hard_real_time_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#real_time_operating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Hierarchial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Hierarchial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#High_performance_Computing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#High_performance_Computing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-performance computing (HPC) is the use of parallel processing for running advanced application programs efficiently, reliably and quickly. The term applies especially to systems that function above a teraflop or 1012 floating-point operations per second.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Human_computer_interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Human_computer_interaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCI (human-computer interaction) is the study of how people interact with computers and to what extent computers are or are not developed for successful interaction with human beings. A significant number of major corporations and academic institutions now study HCI.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Image_Processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Image_Processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Knowledge_Representation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Knowledge_Representation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Graphics_and_Visualization"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_ambiguity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_ambiguity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Micro_Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Micro_Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Automata"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Digital_Logic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Mobile_and_sensor_systems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Mobile_and_sensor_systems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Model_Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Model_Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Morpheme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Morpheme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Morphology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Morphology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Multimedia_Computing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Multimedia_Computing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multimedia is the field concerned with the computer-controlled integration of text, graphics, drawings, still and moving images (Video), animation, audio, and any other media where every type of information can be represented, stored, transmitted and processed digitally.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NLP_Types -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NLP_Types">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_Language_Processing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTypes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NLP_Types"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_Language_Processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_Language_Processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processing of Natural Language is required when you want an intelligent system like robot to perform as per your instructions, when you want to hear decision from a dialogue based clinical expert system, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural Language Processing (NLP) refers to AI method of communicating with an intelligent systems using a natural language such as English.</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial_intelligence_and_machine_learning</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_generation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_generation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NLP_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_understanding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_understanding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NLP_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Networking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Networking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Security-_Privacy_and_Cryptography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A computer network is a set of computers connected together for the purpose of sharing resources. The most common resource shared today is connection to the Internet. Other shared resources can include a printer or a file server</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Non_Relational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Non_Relational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Non_Relational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some popular Operating Systems include Linux, Windows, OS X, VMS, OS/400, AIX, z/OS, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Operating System (OS) is an interface between a computer user and computer hardware. An operating system is a software which performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTypes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pattern_recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pattern_recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Phonology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Phonology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pragmatic_analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pragmatic_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pragmatics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Pragmatics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Process">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Data_Mining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Program_execution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Program_execution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Programming_languages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Programming_languages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some of the computer programming languages are C, C++, Java, Python etc</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A programming language is a formal computer language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs to control the behavior of a machine or to express algorithms.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Relational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Relational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Research -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Research"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Robotics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Robotics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Artificial_intelligence_and_machine_learning"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_Engineering"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Knowledge_Representation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Relational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Security-_Privacy_and_Cryptography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Security-_Privacy_and_Cryptography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Semantics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Semantics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sentence_planning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sentence_planning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_generation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Software_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Software_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ResearchArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Use"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Programming_languages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntactic_analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntactic_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax_level_ambiguity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax_level_ambiguity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_Language_Processing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#hasTerminology"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Text_planning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Text_planning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_generation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Text_realization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Text_realization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Natural_language_generation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Word_Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Word_Knowledge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Terminology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#computer_vision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#computer_vision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#distributed_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#distributed_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#error_handling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#error_handling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#file_system_manipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#file_system_manipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#high_level_vision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#high_level_vision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#intermediate_level_vision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#intermediate_level_vision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#low_level_vision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#low_level_vision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Computer_vision_types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#network_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#network_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#protection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#protection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#real_time_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#real_time_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#referential_ambiguity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#referential_ambiguity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Difficulties"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#resource_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#resource_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#semantic_analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#semantic_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Generic_Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#soft_real_time_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#soft_real_time_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#real_time_operating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#time_sharing_operating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#time_sharing_operating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_system_Types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#I/O_operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#I/O_operation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Services"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#AllegroGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#AllegroGraph">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ArrangoDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#ArrangoDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Backtracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Backtracking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Brute_Force -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Brute_Force">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Bubble_sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Bubble_sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Cassandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Cassandra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Comb_sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Comb_sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#CouchDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#CouchDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Decrease_and_Conquer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Decrease_and_Conquer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Divide_and_Conquer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Divide_and_Conquer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Dynamic_programming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Dynamic_programming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#GraphDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#GraphDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Greedy_algorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Greedy_algorithm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#HBase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#HBase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Heap_Sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Heap_Sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Insertion_sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Insertion_sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_Ambiguity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Lexical_Ambiguity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Linux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Linux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Mac_OS_X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Mac_OS_X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Merge_sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Merge_sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#MongoDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#MongoDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#MySql -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#MySql">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Neo4J -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Neo4J">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Oracle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Oracle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#PostgreSQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#PostgreSQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Quick_Sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Quick_Sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Redis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Redis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#NoSql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQLite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQLite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#SQL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Selection_Sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Selection_Sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Shell_sort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Shell_sort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Sorting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax_level_ambiguity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Syntax_level_ambiguity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#TetraAster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#TetraAster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Graph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Transform_and_conquer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Transform_and_conquer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Searching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Windows -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Windows">
+        <rdf:type rdf:resource="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#Operating_Systems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#referential_ambiguity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/koneti/ontologies/2017/3/ComSciOntology#referential_ambiguity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<title>Knowledge Discovery</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" sizes="192x192" href="images/android-desktop.png" />
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png" />
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="images/touch/ms-touch-icon-144x144-precomposed.png" />
+<meta name="msapplication-TileColor" content="#3372DF" />
+
+<link rel="shortcut icon" href="images/favicon.png" />
+<style type="text/css">
+</style>
+<link rel="stylesheet" href="css/fonts.css" />
+<link rel="stylesheet" href="css/material-icon.css" />
+<link rel="stylesheet" href="css/mterial.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body
+	class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+		<div th:replace="fragments/header :: header"></div>
+		<main class="mdl-layout__content">
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--8-col search-text">
+				<h2>Ready to do some research</h2>
+				<p>Connect and collaborate with researchers from around the
+					world in all scientific disciplines</p>
+			</div>
+		</div>
+		<div class="mdl-grid--no-spacing main-bg">
+			<div class="inner-bg">
+				<h2>Keep up with Education <br/> Research Services</h2>
+			</div>
+			<div class="overlay-bg"></div>
+		</div>
+		<div class="mdl-layout__tab-panel is-active section-main">
+			<section class="mdl-grid icons-main">
+				<img class="img-icon" src="/images/icons.jpg" alt=""></img>
+			</section>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+		</main>
+	</div>
+
+	<script src="js/material.js"></script>
+</body>
+</html>
